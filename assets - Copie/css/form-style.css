@@ -1,0 +1,111 @@
+/* Style pour le formulaire de devis */
+
+#devis-form-container {
+    max-width: 100%;
+}
+
+.devis-form {
+    width: 100%;
+}
+
+.devis-form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+.devis-form input,
+.devis-form textarea,
+.devis-form select {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid #eee;
+    background: #f8f9fa;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.devis-form input:focus,
+.devis-form textarea:focus,
+.devis-form select:focus {
+    outline: none;
+    border-color: #4a7c2c;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(74, 124, 44, 0.1);
+}
+
+.devis-form select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 3rem;
+}
+
+.devis-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.devis-form button[type="submit"] {
+    width: 100%;
+    padding: 1.2rem;
+    background: #2d5a27;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.devis-form button[type="submit"]:hover:not(:disabled) {
+    background: #4a7c2c;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(45, 90, 39, 0.2);
+}
+
+.devis-form button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.form-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.form-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+.btn-loading {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .devis-form input,
+    .devis-form textarea,
+    .devis-form select,
+    .devis-form button[type="submit"] {
+        padding: 1rem;
+    }
+}
